@@ -1,0 +1,12 @@
+.keys{
+    display: flex;
+    
+}
+.key{
+    font-size: 20px;
+    transition: all 0.3s  ease-in-out;
+    margin-right: 10px;
+}
+.active{
+    font-size: 30px;
+}
