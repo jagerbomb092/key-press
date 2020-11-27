@@ -47,3 +47,33 @@ let inventors = [
     }
  })
  console.table(age)
+ //https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+//  let categoty = document.querySelector(".mw-categoty")
+//  let groups = Array.from(document.querySelectorAll("a")) 
+//  let de = groups.map(group => group.textContent)
+//                 // .filter(streetName => streetName.includes('de'))
+// 7.Bai tap xap xep ten theo bang chu cai
+let alpha = people.sort((lastOne, nextOne)=>{
+    let [aLast, aFirst] = lastOne.split(', ')
+    let [bLast, bFirst] = nextOne.split(', ')
+    // console.log([aLast, aFirst]);
+    // console.log([bLast, bFirst]);
+    if (aFirst>bFirst) {
+        return 1
+    }
+    else{
+        return -1
+    }
+})
+console.log(alpha);
+//bien khac nhau cong don
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+let totalAll = data.reduce((obj,datas)=>{
+    if(!obj[datas]){
+        obj[datas] = 0
+    }
+    console.log(!obj[datas],datas,obj[datas]);
+    obj[datas]++
+    return obj
+},{})
+console.log(totalAll);
